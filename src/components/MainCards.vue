@@ -13,7 +13,9 @@ export default {
 <template>
   <div class="container-cards">
     <MainCardsNumber />
-    <MainCard />
+    <div class="list-cards">
+      <MainCard />
+    </div>
   </div>
 </template>
 
@@ -21,5 +23,12 @@ export default {
 .container-cards {
   padding: 50px;
   background-color: white;
+}
+
+.list-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 </style>
