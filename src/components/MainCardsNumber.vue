@@ -1,10 +1,18 @@
 <script>
-export default {};
+import { store } from "../store";
+
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
 </script>
 
 <template>
   <div class="container-card-number">
-    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+    <h3>Found {{ store.yuCards.length }} cards</h3>
   </div>
 </template>
 
