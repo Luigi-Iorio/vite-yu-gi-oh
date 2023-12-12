@@ -23,12 +23,19 @@ export default {
 </script>
 
 <template>
+  <!-- main -->
   <main>
     <div class="container">
+      <!-- search -->
       <MainSearch />
+      <!-- /search -->
+
+      <!-- cont cards -->
       <MainCards />
+      <!-- / cont cards -->
     </div>
   </main>
+  <!-- /main -->
 </template>
 
 <style lang="scss" scoped>

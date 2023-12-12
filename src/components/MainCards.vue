@@ -18,16 +18,23 @@ export default {
 
 <template>
   <div class="container-cards">
+    <!-- numero carte -->
     <MainCardsNumber />
+    <!-- /numero carte -->
+
+    <!-- lista carte -->
     <ul class="list-cards">
       <li v-for="card in store.yuCards">
+        <!-- carta -->
         <MainCard
           :img="card.card_images[0].image_url"
           :name="card.name"
           :type="card.archetype"
         />
+        <!-- / carta -->
       </li>
     </ul>
+    <!-- /lista carte -->
   </div>
 </template>
 
