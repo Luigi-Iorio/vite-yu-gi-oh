@@ -2,6 +2,16 @@
 export default {};
 </script>
 
-<template></template>
+<template>
+  <select name="search" id="search">
+    <option value="alien">Alien</option>
+  </select>
+</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+select {
+  margin: 20px 15px;
+  padding: 10px;
+  width: 160px;
+}
+</style>
