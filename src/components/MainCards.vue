@@ -11,8 +11,15 @@ export default {
 </script>
 
 <template>
-  <MainCardsNumber />
-  <MainCard />
+  <div class="container-cards">
+    <MainCardsNumber />
+    <MainCard />
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container-cards {
+  padding: 50px;
+  background-color: white;
+}
+</style>
