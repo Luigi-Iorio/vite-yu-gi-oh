@@ -10,12 +10,14 @@ export default {
 </script>
 
 <template>
-  <div class="cont">
-    <div class="logo">
-      <img :src="logo" :alt="title" />
+  <header>
+    <div class="cont">
+      <div class="logo">
+        <img :src="logo" :alt="title" />
+      </div>
+      <h1>{{ title }}</h1>
     </div>
-    <h1>{{ title }}</h1>
-  </div>
+  </header>
 </template>
 
 <style lang="scss" scoped>
