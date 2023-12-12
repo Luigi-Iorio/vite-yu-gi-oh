@@ -2,7 +2,7 @@
 import MainSearch from "./MainSearch.vue";
 import MainCards from "./MainCards.vue";
 import axios from "axios";
-import { store } from "../store.js";
+import { store } from "../store";
 
 export default {
   data() {
@@ -12,7 +12,7 @@ export default {
   },
   created() {
     axios.get(store.apiUrl).then((response) => {
-      store.yuCards = response.data;
+      store.yuCards = response.data.data;
     });
   },
   components: {
