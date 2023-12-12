@@ -1,8 +1,20 @@
 <script>
 import MainSearch from "./MainSearch.vue";
 import MainCards from "./MainCards.vue";
+import axios from "axios";
+import { store } from "../store.js";
 
 export default {
+  data() {
+    return {
+      store,
+    };
+  },
+  created() {
+    axios.get(store.apiUrl).then((response) => {
+      store.yuCards = response.data;
+    });
+  },
   components: {
     MainSearch,
     MainCards,
