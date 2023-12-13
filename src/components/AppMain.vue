@@ -2,7 +2,7 @@
 import MainSearch from "./MainSearch.vue";
 import MainCards from "./MainCards.vue";
 import axios from "axios";
-import { store } from "../store";
+import { store } from "../store.js";
 
 export default {
   data() {

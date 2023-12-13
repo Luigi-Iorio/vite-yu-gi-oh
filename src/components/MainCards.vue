@@ -1,7 +1,7 @@
 <script>
 import MainCardsNumber from "./MainCardsNumber.vue";
 import MainCard from "./MainCard.vue";
-import { store } from "../store";
+import { store } from "../store.js";
 
 export default {
   data() {
