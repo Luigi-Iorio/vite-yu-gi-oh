@@ -47,4 +47,10 @@ h1 {
   font-size: 42px;
   font-weight: normal;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+  }
+}
 </style>

@@ -57,4 +57,16 @@ li {
   width: calc((100% / 5 - 25px) + 25px / 5);
   background-color: $color-main;
 }
+
+@media screen and (max-width: 992px) {
+  li {
+    width: calc((100% / 3 - 25px) + 25px / 3);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  li {
+    width: 100%;
+  }
+}
 </style>
