@@ -10,10 +10,21 @@ export default {
       store,
     };
   },
+  methods: {
+    ricerca() {
+      if (store.keyArchetype !== "") {
+        axios
+          .get(store.apiUrl, { params: { archetype: store.keyArchetype } })
+          .then((response) => {
+            store.yuCards = response.data.data;
+          });
+      } else {
+        this.store.yuCards = [];
+      }
+    },
+  },
   created() {
-    axios.get(store.apiUrl).then((response) => {
-      store.yuCards = response.data.data;
-    });
+    this.ricerca();
   },
   components: {
     MainSearch,
@@ -27,7 +38,7 @@ export default {
   <main>
     <div class="container">
       <!-- search -->
-      <MainSearch />
+      <MainSearch @ricerca="ricerca" />
       <!-- /search -->
 
       <!-- cont cards -->

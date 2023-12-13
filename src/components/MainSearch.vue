@@ -17,11 +17,12 @@ export default {
 </script>
 
 <template>
-  <select name="search" id="search">
-    <option value="">Select archetype</option>
+  <select name="search" id="search" v-model="store.keyArchetype">
+    <option selected value="">Select archetype</option>
     <option
       v-for="archetype in store.yuArchetype"
       :value="archetype.archetype_name"
+      @click="$emit('ricerca')"
     >
       {{ archetype.archetype_name }}
     </option>
