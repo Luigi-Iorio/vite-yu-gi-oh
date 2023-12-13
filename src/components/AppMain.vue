@@ -19,7 +19,9 @@ export default {
             store.yuCards = response.data.data;
           });
       } else {
-        this.store.yuCards = [];
+        axios.get(store.apiUrl).then((response) => {
+          store.yuCards = response.data.data;
+        });
       }
     },
   },

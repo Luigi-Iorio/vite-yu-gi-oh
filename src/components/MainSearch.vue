@@ -8,11 +8,6 @@ export default {
       store,
     };
   },
-  methods: {
-    resetCards() {
-      this.store.yuCards = [];
-    },
-  },
   created() {
     axios.get(store.apiArchetypeUrl).then((response) => {
       store.yuArchetype = response.data;
@@ -23,7 +18,9 @@ export default {
 
 <template>
   <select name="search" id="search" v-model="store.keyArchetype">
-    <option @click="resetCards" selected value="">Select archetype</option>
+    <option @click="$emit('ricerca')" selected value="">
+      Select archetype
+    </option>
     <option
       v-for="archetype in store.yuArchetype"
       :value="archetype.archetype_name"
