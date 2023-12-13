@@ -1,10 +1,30 @@
 <script>
-export default {};
+import axios from "axios";
+import { store } from "../store.js";
+
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+  created() {
+    axios.get(store.apiArchetypeUrl).then((response) => {
+      store.yuArchetype = response.data;
+    });
+  },
+};
 </script>
 
 <template>
   <select name="search" id="search">
-    <option value="alien">Alien</option>
+    <option value="">Select archetype</option>
+    <option
+      v-for="archetype in store.yuArchetype"
+      :value="archetype.archetype_name"
+    >
+      {{ archetype.archetype_name }}
+    </option>
   </select>
 </template>
 
