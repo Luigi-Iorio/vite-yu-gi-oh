@@ -28,6 +28,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+header {
+  background-color: white;
+}
 .cont {
   display: flex;
   flex-direction: row;
